@@ -1,0 +1,11 @@
+---
+-
+  hosts: windows
+  tasks:
+    -
+      name: "Test connection"
+      win_ping: ~
+    -
+      name: "Install MySQL Community Server"
+      win_chocolatey:
+        name: mysql
